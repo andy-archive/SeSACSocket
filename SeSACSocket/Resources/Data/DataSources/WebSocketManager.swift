@@ -19,6 +19,8 @@ final class WebSocketManager: NSObject {
     
     //MARK: - Properties
     private var webSocket: URLSessionWebSocketTask?
+    private var timer: Timer? // 5초마다 ping을 위해 생성
+    private var isSocketOpen = false // 소켓의 연결 상태
     
     //MARK: - Methods
     /// 1) open
@@ -33,6 +35,7 @@ final class WebSocketManager: NSObject {
             // dataTask가 아닌 webSocketTask
             webSocket = session.webSocketTask(with: url)
             webSocket?.resume()
+            ping()
         }
     }
     
@@ -40,6 +43,10 @@ final class WebSocketManager: NSObject {
     func closeWebSocket() {
         webSocket?.cancel(with: .goingAway, reason: nil)
         webSocket = nil
+        
+        timer?.invalidate()
+        timer = nil
+        isSocketOpen = false
     }
     
     /// 3) send
@@ -53,19 +60,44 @@ final class WebSocketManager: NSObject {
             if let error {
                 print("SEND ERROR: \(error.localizedDescription)")
             }
+            print(#function, message)
         })
     }
     
     /// 4) receive
     func receive() {
-        webSocket?.receive(completionHandler: { result in
-            switch result {
-            case .success(let message):
-                print("RECEIVE SUCCESS: \(message)")
-            case .failure(let failure):
-                print("RECEIVE FAILURE: \(failure)")
+        if isSocketOpen {
+            webSocket?.receive(completionHandler: { [weak self] result in
+                guard let self else { return }
+                
+                switch result {
+                case .success(let message):
+                    print("RECEIVE SUCCESS: \(message)")
+                case .failure(let failure):
+                    print("RECEIVE FAILURE: \(failure)")
+                }
+                
+                self.receive() // 📝 재귀에 의해 소켓이 내부적으로 유지 됨 (공식 문서)
+            })
+        }
+    }
+    
+    /// 5) ping
+    /// 서버에 의해 연결이 끊어지지 않도록 클라이언트가 주기적으로 보내는 메시지
+    private func ping() {
+        self.timer = Timer.scheduledTimer(
+            withTimeInterval: 5.0,
+            repeats: true,
+            block: { [weak self] _ in
+                self?.webSocket?.sendPing(pongReceiveHandler: { error in
+                    if let error {
+                        print("PING ERROR")
+                    } else {
+                        print("PING !!")
+                    }
+                })
             }
-        })
+        )
     }
 }
 
@@ -87,6 +119,8 @@ extension WebSocketManager: URLSessionWebSocketDelegate {
         didOpenWithProtocol protocol: String?
     ) {
         print("OPEN WEBSOCKET")
+        isSocketOpen = true
+        receive()
     }
     
     /// didClose - 웹 소켓이 연결이 해제 되었는지 확인
@@ -96,6 +130,7 @@ extension WebSocketManager: URLSessionWebSocketDelegate {
         didCloseWith closeCode: URLSessionWebSocketTask.CloseCode,
         reason: Data?
     ) {
+        isSocketOpen = false
         print("CLOSE WEBSOCKET")
     }
 }
