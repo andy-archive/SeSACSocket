@@ -5,6 +5,7 @@
 //  Created by Taekwon Lee on 12/26/23.
 //
 
+import Combine
 import Foundation
 
 final class WebSocketManager: NSObject {
@@ -21,6 +22,17 @@ final class WebSocketManager: NSObject {
     private var webSocket: URLSessionWebSocketTask?
     private var timer: Timer? // 5초마다 ping을 위해 생성
     private var isSocketOpen = false // 소켓의 연결 상태
+    
+    //MARK: - Combine
+    var orderBookSubject = PassthroughSubject<OrderBookWS, Never>()
+    /*
+     RxSwift vs Combine
+        PublishSubject vs PassthroughSubject
+        BehaviorSubject vs CurrentValueSubject
+     BUT
+        RxSwift는 데이터 타입만 설정
+        Combine은 데이터 타입 + 오류 타입 함꼐 지정
+     */
     
     //MARK: - Methods
     /// 1) open
@@ -72,9 +84,24 @@ final class WebSocketManager: NSObject {
                 
                 switch result {
                 case .success(let message):
-                    print("RECEIVE SUCCESS: \(message)")
+                    print("RECEIVE MESSAGE: \(message)")
+                    
+                    switch message {
+                    case .data(let data):
+                        if let decodedData = try? JSONDecoder().decode(OrderBookWS.self, from: data) {
+                            print("DECODE SUCCESS: \(decodedData)")
+                            
+                            self.orderBookSubject.send(decodedData) // Combine
+                        }
+                    case .string(let string):
+                        print(string)
+                    @unknown default:
+                        print("UNKNOWN ERROR")
+                    }
+                    
                 case .failure(let failure):
                     print("RECEIVE FAILURE: \(failure)")
+                    self.closeWebSocket()
                 }
                 
                 self.receive() // 📝 재귀에 의해 소켓이 내부적으로 유지 됨 (공식 문서)
@@ -85,19 +112,17 @@ final class WebSocketManager: NSObject {
     /// 5) ping
     /// 서버에 의해 연결이 끊어지지 않도록 클라이언트가 주기적으로 보내는 메시지
     private func ping() {
-        self.timer = Timer.scheduledTimer(
-            withTimeInterval: 5.0,
-            repeats: true,
-            block: { [weak self] _ in
-                self?.webSocket?.sendPing(pongReceiveHandler: { error in
-                    if let error {
-                        print("PING ERROR")
-                    } else {
-                        print("PING !!")
-                    }
-                })
-            }
-        )
+        self.timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { [weak self] _ in
+            guard let self else { return }
+            
+            self.webSocket?.sendPing(pongReceiveHandler: { error in
+                if let error {
+                    print("PING ERROR: \(error)")
+                } else {
+                    print("PING !!")
+                }
+            })
+        })
     }
 }
 

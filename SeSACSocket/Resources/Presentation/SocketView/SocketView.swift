@@ -15,7 +15,9 @@ struct SocketView: View {
     
     var body: some View {
         VStack {
-            Text("SOCKET VIEW")
+            ForEach(viewModel.askOrderBook, id: \.id) { item in
+                Text("\(item.price)")
+            }
         }
         .padding()
     }

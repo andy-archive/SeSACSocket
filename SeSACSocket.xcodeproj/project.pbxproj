@@ -18,6 +18,7 @@
 		38DEBB012B3A69220035D4A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB002B3A69220035D4A5 /* Constants.swift */; };
 		38DEBB062B3A6B3F0035D4A5 /* SocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB052B3A6B3F0035D4A5 /* SocketViewModel.swift */; };
 		38DEBB092B3A6CFF0035D4A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB082B3A6CFF0035D4A5 /* ContentView.swift */; };
+		38DEBB0D2B3A7DBB0035D4A5 /* OrderBookDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB0C2B3A7DBB0035D4A5 /* OrderBookDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		38DEBB002B3A69220035D4A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38DEBB052B3A6B3F0035D4A5 /* SocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketViewModel.swift; sourceTree = "<group>"; };
 		38DEBB082B3A6CFF0035D4A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38DEBB0C2B3A7DBB0035D4A5 /* OrderBookDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		38DEBAF82B3A62DB0035D4A5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				38DEBB0B2B3A7DAF0035D4A5 /* DataMapping */,
 				38DEBAF92B3A63A10035D4A5 /* DataSources */,
 			);
 			path = Data;
@@ -209,6 +212,14 @@
 				38DEBB082B3A6CFF0035D4A5 /* ContentView.swift */,
 			);
 			path = ContentView;
+			sourceTree = "<group>";
+		};
+		38DEBB0B2B3A7DAF0035D4A5 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBB0C2B3A7DBB0035D4A5 /* OrderBookDTO.swift */,
+			);
+			path = DataMapping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +358,7 @@
 				38DEBAFB2B3A63AC0035D4A5 /* WebSocketManager.swift in Sources */,
 				38DEBB012B3A69220035D4A5 /* Constants.swift in Sources */,
 				38DEBB062B3A6B3F0035D4A5 /* SocketViewModel.swift in Sources */,
+				38DEBB0D2B3A7DBB0035D4A5 /* OrderBookDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
