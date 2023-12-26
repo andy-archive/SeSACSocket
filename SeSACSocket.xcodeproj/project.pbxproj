@@ -14,6 +14,8 @@
 		38DEBADB2B3A612F0035D4A5 /* SeSACSocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBADA2B3A612F0035D4A5 /* SeSACSocketTests.swift */; };
 		38DEBAE52B3A612F0035D4A5 /* SeSACSocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBAE42B3A612F0035D4A5 /* SeSACSocketUITests.swift */; };
 		38DEBAE72B3A612F0035D4A5 /* SeSACSocketUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBAE62B3A612F0035D4A5 /* SeSACSocketUITestsLaunchTests.swift */; };
+		38DEBAFB2B3A63AC0035D4A5 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBAFA2B3A63AC0035D4A5 /* WebSocketManager.swift */; };
+		38DEBB012B3A69220035D4A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB002B3A69220035D4A5 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		38DEBAE02B3A612F0035D4A5 /* SeSACSocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACSocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DEBAE42B3A612F0035D4A5 /* SeSACSocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACSocketUITests.swift; sourceTree = "<group>"; };
 		38DEBAE62B3A612F0035D4A5 /* SeSACSocketUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACSocketUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38DEBAFA2B3A63AC0035D4A5 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		38DEBB002B3A69220035D4A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				38DEBAF62B3A628A0035D4A5 /* Application */,
+				38DEBAF82B3A62DB0035D4A5 /* Data */,
 				38DEBAF32B3A62780035D4A5 /* Presentation */,
+				38DEBAFC2B3A69090035D4A5 /* Utilities */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -157,6 +163,38 @@
 				38DEBACB2B3A612D0035D4A5 /* ContentView.swift */,
 			);
 			path = ContentView;
+			sourceTree = "<group>";
+		};
+		38DEBAF82B3A62DB0035D4A5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBAF92B3A63A10035D4A5 /* DataSources */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		38DEBAF92B3A63A10035D4A5 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBAFA2B3A63AC0035D4A5 /* WebSocketManager.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		38DEBAFC2B3A69090035D4A5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBAFE2B3A69110035D4A5 /* Constants */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		38DEBAFE2B3A69110035D4A5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBB002B3A69220035D4A5 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +329,8 @@
 			files = (
 				38DEBACC2B3A612D0035D4A5 /* ContentView.swift in Sources */,
 				38DEBACA2B3A612D0035D4A5 /* SeSACSocketApp.swift in Sources */,
+				38DEBAFB2B3A63AC0035D4A5 /* WebSocketManager.swift in Sources */,
+				38DEBB012B3A69220035D4A5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
