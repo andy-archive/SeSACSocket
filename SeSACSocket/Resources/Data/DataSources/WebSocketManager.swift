@@ -19,6 +19,7 @@ final class WebSocketManager: NSObject {
     private var webSocket: URLSessionWebSocketTask?
     
     //MARK: - Methods
+    /// 1) open
     func openWebSocket() {
         let session = URLSession(
             configuration: .default,
@@ -27,15 +28,16 @@ final class WebSocketManager: NSObject {
         )
         
         if let url = URL(string: Constants.url.upbit.orderbook) {
-            webSocket = session.webSocketTask(
-                // dataTask가 아닌 webSocketTask
-                with: url
-            )
+            // dataTask가 아닌 webSocketTask
+            webSocket = session.webSocketTask(with: url)
             webSocket?.resume()
         }
     }
     
-    func closeWebSocket() { }
+    /// 2) close
+    func closeWebSocket() {
+        webSocket?.cancel(with: .goingAway, reason: nil)
+    }
 }
 
 /* 📝 Note
