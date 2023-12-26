@@ -59,7 +59,7 @@ extension WebSocketManager: URLSessionWebSocketDelegate {
         webSocketTask: URLSessionWebSocketTask,
         didOpenWithProtocol protocol: String?
     ) {
-        <#code#>
+        print(#function)
     }
     
     /// didClose - 웹 소켓이 연결이 해제 되었는지 확인
@@ -69,6 +69,6 @@ extension WebSocketManager: URLSessionWebSocketDelegate {
         didCloseWith closeCode: URLSessionWebSocketTask.CloseCode,
         reason: Data?
     ) {
-        <#code#>
+        print(#function)
     }
 }

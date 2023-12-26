@@ -17,6 +17,7 @@
 		38DEBAFB2B3A63AC0035D4A5 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBAFA2B3A63AC0035D4A5 /* WebSocketManager.swift */; };
 		38DEBB012B3A69220035D4A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB002B3A69220035D4A5 /* Constants.swift */; };
 		38DEBB062B3A6B3F0035D4A5 /* SocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB052B3A6B3F0035D4A5 /* SocketViewModel.swift */; };
+		38DEBB092B3A6CFF0035D4A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB082B3A6CFF0035D4A5 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		38DEBAFA2B3A63AC0035D4A5 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
 		38DEBB002B3A69220035D4A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38DEBB052B3A6B3F0035D4A5 /* SocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketViewModel.swift; sourceTree = "<group>"; };
+		38DEBB082B3A6CFF0035D4A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		38DEBAF32B3A62780035D4A5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				38DEBB072B3A6CF80035D4A5 /* ContentView */,
 				38DEBAF72B3A629E0035D4A5 /* SocketView */,
 				38DEBACF2B3A612F0035D4A5 /* Preview Content */,
 			);
@@ -198,6 +201,14 @@
 				38DEBB002B3A69220035D4A5 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		38DEBB072B3A6CF80035D4A5 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBB082B3A6CFF0035D4A5 /* ContentView.swift */,
+			);
+			path = ContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +343,7 @@
 			files = (
 				38DEBACC2B3A612D0035D4A5 /* SocketView.swift in Sources */,
 				38DEBACA2B3A612D0035D4A5 /* SeSACSocketApp.swift in Sources */,
+				38DEBB092B3A6CFF0035D4A5 /* ContentView.swift in Sources */,
 				38DEBAFB2B3A63AC0035D4A5 /* WebSocketManager.swift in Sources */,
 				38DEBB012B3A69220035D4A5 /* Constants.swift in Sources */,
 				38DEBB062B3A6B3F0035D4A5 /* SocketViewModel.swift in Sources */,
@@ -497,7 +509,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SeSACSocket/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SeSACSocket/Resources/Presentation/Preview Content\"";
 				DEVELOPMENT_TEAM = 3UNP2C529F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -526,7 +538,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SeSACSocket/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SeSACSocket/Resources/Presentation/Preview Content\"";
 				DEVELOPMENT_TEAM = 3UNP2C529F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
