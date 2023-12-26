@@ -94,10 +94,8 @@
 		38DEBAC82B3A612D0035D4A5 /* SeSACSocket */ = {
 			isa = PBXGroup;
 			children = (
-				38DEBAC92B3A612D0035D4A5 /* SeSACSocketApp.swift */,
-				38DEBACB2B3A612D0035D4A5 /* ContentView.swift */,
+				38DEBAF52B3A62850035D4A5 /* Resources */,
 				38DEBACD2B3A612F0035D4A5 /* Assets.xcassets */,
-				38DEBACF2B3A612F0035D4A5 /* Preview Content */,
 			);
 			path = SeSACSocket;
 			sourceTree = "<group>";
@@ -125,6 +123,40 @@
 				38DEBAE62B3A612F0035D4A5 /* SeSACSocketUITestsLaunchTests.swift */,
 			);
 			path = SeSACSocketUITests;
+			sourceTree = "<group>";
+		};
+		38DEBAF32B3A62780035D4A5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBAF72B3A629E0035D4A5 /* ContentView */,
+				38DEBACF2B3A612F0035D4A5 /* Preview Content */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		38DEBAF52B3A62850035D4A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBAF62B3A628A0035D4A5 /* Application */,
+				38DEBAF32B3A62780035D4A5 /* Presentation */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		38DEBAF62B3A628A0035D4A5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBAC92B3A612D0035D4A5 /* SeSACSocketApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		38DEBAF72B3A629E0035D4A5 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBACB2B3A612D0035D4A5 /* ContentView.swift */,
+			);
+			path = ContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
