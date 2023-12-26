@@ -11,7 +11,7 @@ import SwiftUI
 struct SeSACSocketApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SocketView()
         }
     }
 }

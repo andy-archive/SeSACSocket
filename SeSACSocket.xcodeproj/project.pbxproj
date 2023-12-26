@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38DEBACA2B3A612D0035D4A5 /* SeSACSocketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBAC92B3A612D0035D4A5 /* SeSACSocketApp.swift */; };
-		38DEBACC2B3A612D0035D4A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBACB2B3A612D0035D4A5 /* ContentView.swift */; };
+		38DEBACC2B3A612D0035D4A5 /* SocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBACB2B3A612D0035D4A5 /* SocketView.swift */; };
 		38DEBACE2B3A612F0035D4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38DEBACD2B3A612F0035D4A5 /* Assets.xcassets */; };
 		38DEBAD12B3A612F0035D4A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38DEBAD02B3A612F0035D4A5 /* Preview Assets.xcassets */; };
 		38DEBADB2B3A612F0035D4A5 /* SeSACSocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBADA2B3A612F0035D4A5 /* SeSACSocketTests.swift */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		38DEBAC62B3A612D0035D4A5 /* SeSACSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DEBAC92B3A612D0035D4A5 /* SeSACSocketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACSocketApp.swift; sourceTree = "<group>"; };
-		38DEBACB2B3A612D0035D4A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38DEBACB2B3A612D0035D4A5 /* SocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketView.swift; sourceTree = "<group>"; };
 		38DEBACD2B3A612F0035D4A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38DEBAD02B3A612F0035D4A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38DEBAD62B3A612F0035D4A5 /* SeSACSocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACSocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +134,7 @@
 		38DEBAF32B3A62780035D4A5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				38DEBAF72B3A629E0035D4A5 /* ContentView */,
+				38DEBAF72B3A629E0035D4A5 /* SocketView */,
 				38DEBACF2B3A612F0035D4A5 /* Preview Content */,
 			);
 			path = Presentation;
@@ -159,13 +159,13 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		38DEBAF72B3A629E0035D4A5 /* ContentView */ = {
+		38DEBAF72B3A629E0035D4A5 /* SocketView */ = {
 			isa = PBXGroup;
 			children = (
-				38DEBACB2B3A612D0035D4A5 /* ContentView.swift */,
+				38DEBACB2B3A612D0035D4A5 /* SocketView.swift */,
 				38DEBB052B3A6B3F0035D4A5 /* SocketViewModel.swift */,
 			);
-			path = ContentView;
+			path = SocketView;
 			sourceTree = "<group>";
 		};
 		38DEBAF82B3A62DB0035D4A5 /* Data */ = {
@@ -330,7 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38DEBACC2B3A612D0035D4A5 /* ContentView.swift in Sources */,
+				38DEBACC2B3A612D0035D4A5 /* SocketView.swift in Sources */,
 				38DEBACA2B3A612D0035D4A5 /* SeSACSocketApp.swift in Sources */,
 				38DEBAFB2B3A63AC0035D4A5 /* WebSocketManager.swift in Sources */,
 				38DEBB012B3A69220035D4A5 /* Constants.swift in Sources */,
