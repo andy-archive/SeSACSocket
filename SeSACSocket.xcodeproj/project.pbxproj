@@ -16,6 +16,7 @@
 		38DEBAE72B3A612F0035D4A5 /* SeSACSocketUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBAE62B3A612F0035D4A5 /* SeSACSocketUITestsLaunchTests.swift */; };
 		38DEBAFB2B3A63AC0035D4A5 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBAFA2B3A63AC0035D4A5 /* WebSocketManager.swift */; };
 		38DEBB012B3A69220035D4A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB002B3A69220035D4A5 /* Constants.swift */; };
+		38DEBB062B3A6B3F0035D4A5 /* SocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB052B3A6B3F0035D4A5 /* SocketViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		38DEBAE62B3A612F0035D4A5 /* SeSACSocketUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACSocketUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		38DEBAFA2B3A63AC0035D4A5 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
 		38DEBB002B3A69220035D4A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		38DEBB052B3A6B3F0035D4A5 /* SocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				38DEBACB2B3A612D0035D4A5 /* ContentView.swift */,
+				38DEBB052B3A6B3F0035D4A5 /* SocketViewModel.swift */,
 			);
 			path = ContentView;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				38DEBACA2B3A612D0035D4A5 /* SeSACSocketApp.swift in Sources */,
 				38DEBAFB2B3A63AC0035D4A5 /* WebSocketManager.swift in Sources */,
 				38DEBB012B3A69220035D4A5 /* Constants.swift in Sources */,
+				38DEBB062B3A6B3F0035D4A5 /* SocketViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
