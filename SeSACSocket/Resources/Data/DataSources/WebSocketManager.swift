@@ -39,6 +39,33 @@ final class WebSocketManager: NSObject {
     /// 2) close
     func closeWebSocket() {
         webSocket?.cancel(with: .goingAway, reason: nil)
+        webSocket = nil
+    }
+    
+    /// 3) send
+    func send() {
+        let stringJSON = """
+        [{"ticket":"test"},{"type":"orderbook","codes":["KRW-BTC"]}]
+        """
+        let message = URLSessionWebSocketTask.Message.string(stringJSON)
+        
+        webSocket?.send(message, completionHandler: { error in
+            if let error {
+                print("SEND ERROR: \(error.localizedDescription)")
+            }
+        })
+    }
+    
+    /// 4) receive
+    func receive() {
+        webSocket?.receive(completionHandler: { result in
+            switch result {
+            case .success(let message):
+                print("RECEIVE SUCCESS: \(message)")
+            case .failure(let failure):
+                print("RECEIVE FAILURE: \(failure)")
+            }
+        })
     }
 }
 
@@ -59,7 +86,7 @@ extension WebSocketManager: URLSessionWebSocketDelegate {
         webSocketTask: URLSessionWebSocketTask,
         didOpenWithProtocol protocol: String?
     ) {
-        print(#function)
+        print("OPEN WEBSOCKET")
     }
     
     /// didClose - 웹 소켓이 연결이 해제 되었는지 확인
@@ -69,6 +96,6 @@ extension WebSocketManager: URLSessionWebSocketDelegate {
         didCloseWith closeCode: URLSessionWebSocketTask.CloseCode,
         reason: Data?
     ) {
-        print(#function)
+        print("CLOSE WEBSOCKET")
     }
 }
