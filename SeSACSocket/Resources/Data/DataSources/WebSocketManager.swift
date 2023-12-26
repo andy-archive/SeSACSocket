@@ -13,7 +13,9 @@ final class WebSocketManager: NSObject {
     static let shared = WebSocketManager()
     
     /* ⭐️ NSObject의 public init에 의해 override init으로 바뀜 */
-    private override init() { }
+    private override init() {
+        super.init()
+    }
     
     //MARK: - Properties
     private var webSocket: URLSessionWebSocketTask?
@@ -51,4 +53,22 @@ final class WebSocketManager: NSObject {
 //MARK: - URLSession WebSocket Delegate
 extension WebSocketManager: URLSessionWebSocketDelegate {
     
+    /// didOpen - 웹 소켓이 연결되었는지 확인
+    func urlSession(
+        _ session: URLSession,
+        webSocketTask: URLSessionWebSocketTask,
+        didOpenWithProtocol protocol: String?
+    ) {
+        <#code#>
+    }
+    
+    /// didClose - 웹 소켓이 연결이 해제 되었는지 확인
+    func urlSession(
+        _ session: URLSession,
+        webSocketTask: URLSessionWebSocketTask,
+        didCloseWith closeCode: URLSessionWebSocketTask.CloseCode,
+        reason: Data?
+    ) {
+        <#code#>
+    }
 }
