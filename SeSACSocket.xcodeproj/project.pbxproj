@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		38DEBACA2B3A612D0035D4A5 /* SeSACSocketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBAC92B3A612D0035D4A5 /* SeSACSocketApp.swift */; };
-		38DEBACC2B3A612D0035D4A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBACB2B3A612D0035D4A5 /* ContentView.swift */; };
+		38DEBACC2B3A612D0035D4A5 /* SocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBACB2B3A612D0035D4A5 /* SocketView.swift */; };
 		38DEBACE2B3A612F0035D4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38DEBACD2B3A612F0035D4A5 /* Assets.xcassets */; };
 		38DEBAD12B3A612F0035D4A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38DEBAD02B3A612F0035D4A5 /* Preview Assets.xcassets */; };
 		38DEBADB2B3A612F0035D4A5 /* SeSACSocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBADA2B3A612F0035D4A5 /* SeSACSocketTests.swift */; };
 		38DEBAE52B3A612F0035D4A5 /* SeSACSocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBAE42B3A612F0035D4A5 /* SeSACSocketUITests.swift */; };
 		38DEBAE72B3A612F0035D4A5 /* SeSACSocketUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBAE62B3A612F0035D4A5 /* SeSACSocketUITestsLaunchTests.swift */; };
+		38DEBAFB2B3A63AC0035D4A5 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBAFA2B3A63AC0035D4A5 /* WebSocketManager.swift */; };
+		38DEBB012B3A69220035D4A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB002B3A69220035D4A5 /* Constants.swift */; };
+		38DEBB062B3A6B3F0035D4A5 /* SocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB052B3A6B3F0035D4A5 /* SocketViewModel.swift */; };
+		38DEBB092B3A6CFF0035D4A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB082B3A6CFF0035D4A5 /* ContentView.swift */; };
+		38DEBB0D2B3A7DBB0035D4A5 /* OrderBookDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB0C2B3A7DBB0035D4A5 /* OrderBookDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,7 @@
 /* Begin PBXFileReference section */
 		38DEBAC62B3A612D0035D4A5 /* SeSACSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DEBAC92B3A612D0035D4A5 /* SeSACSocketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACSocketApp.swift; sourceTree = "<group>"; };
-		38DEBACB2B3A612D0035D4A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38DEBACB2B3A612D0035D4A5 /* SocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketView.swift; sourceTree = "<group>"; };
 		38DEBACD2B3A612F0035D4A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38DEBAD02B3A612F0035D4A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38DEBAD62B3A612F0035D4A5 /* SeSACSocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACSocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +49,12 @@
 		38DEBAE02B3A612F0035D4A5 /* SeSACSocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACSocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DEBAE42B3A612F0035D4A5 /* SeSACSocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACSocketUITests.swift; sourceTree = "<group>"; };
 		38DEBAE62B3A612F0035D4A5 /* SeSACSocketUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACSocketUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38DEBAFA2B3A63AC0035D4A5 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		38DEBB002B3A69220035D4A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		38DEBB052B3A6B3F0035D4A5 /* SocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketViewModel.swift; sourceTree = "<group>"; };
+		38DEBB082B3A6CFF0035D4A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38DEBB0C2B3A7DBB0035D4A5 /* OrderBookDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookDTO.swift; sourceTree = "<group>"; };
+		38DEBB0E2B3A97F10035D4A5 /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +85,7 @@
 		38DEBABD2B3A612D0035D4A5 = {
 			isa = PBXGroup;
 			children = (
+				38DEBB0E2B3A97F10035D4A5 /* .gitignore.md */,
 				38DEBAC82B3A612D0035D4A5 /* SeSACSocket */,
 				38DEBAD92B3A612F0035D4A5 /* SeSACSocketTests */,
 				38DEBAE32B3A612F0035D4A5 /* SeSACSocketUITests */,
@@ -94,10 +106,8 @@
 		38DEBAC82B3A612D0035D4A5 /* SeSACSocket */ = {
 			isa = PBXGroup;
 			children = (
-				38DEBAC92B3A612D0035D4A5 /* SeSACSocketApp.swift */,
-				38DEBACB2B3A612D0035D4A5 /* ContentView.swift */,
+				38DEBAF52B3A62850035D4A5 /* Resources */,
 				38DEBACD2B3A612F0035D4A5 /* Assets.xcassets */,
-				38DEBACF2B3A612F0035D4A5 /* Preview Content */,
 			);
 			path = SeSACSocket;
 			sourceTree = "<group>";
@@ -125,6 +135,93 @@
 				38DEBAE62B3A612F0035D4A5 /* SeSACSocketUITestsLaunchTests.swift */,
 			);
 			path = SeSACSocketUITests;
+			sourceTree = "<group>";
+		};
+		38DEBAF32B3A62780035D4A5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBB072B3A6CF80035D4A5 /* ContentView */,
+				38DEBAF72B3A629E0035D4A5 /* SocketView */,
+				38DEBACF2B3A612F0035D4A5 /* Preview Content */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		38DEBAF52B3A62850035D4A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBAF62B3A628A0035D4A5 /* Application */,
+				38DEBAF82B3A62DB0035D4A5 /* Data */,
+				38DEBAF32B3A62780035D4A5 /* Presentation */,
+				38DEBAFC2B3A69090035D4A5 /* Utilities */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		38DEBAF62B3A628A0035D4A5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBAC92B3A612D0035D4A5 /* SeSACSocketApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		38DEBAF72B3A629E0035D4A5 /* SocketView */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBACB2B3A612D0035D4A5 /* SocketView.swift */,
+				38DEBB052B3A6B3F0035D4A5 /* SocketViewModel.swift */,
+			);
+			path = SocketView;
+			sourceTree = "<group>";
+		};
+		38DEBAF82B3A62DB0035D4A5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBB0B2B3A7DAF0035D4A5 /* DataMapping */,
+				38DEBAF92B3A63A10035D4A5 /* DataSources */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		38DEBAF92B3A63A10035D4A5 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBAFA2B3A63AC0035D4A5 /* WebSocketManager.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		38DEBAFC2B3A69090035D4A5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBAFE2B3A69110035D4A5 /* Constants */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		38DEBAFE2B3A69110035D4A5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBB002B3A69220035D4A5 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		38DEBB072B3A6CF80035D4A5 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBB082B3A6CFF0035D4A5 /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		38DEBB0B2B3A7DAF0035D4A5 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBB0C2B3A7DBB0035D4A5 /* OrderBookDTO.swift */,
+			);
+			path = DataMapping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38DEBACC2B3A612D0035D4A5 /* ContentView.swift in Sources */,
+				38DEBACC2B3A612D0035D4A5 /* SocketView.swift in Sources */,
 				38DEBACA2B3A612D0035D4A5 /* SeSACSocketApp.swift in Sources */,
+				38DEBB092B3A6CFF0035D4A5 /* ContentView.swift in Sources */,
+				38DEBAFB2B3A63AC0035D4A5 /* WebSocketManager.swift in Sources */,
+				38DEBB012B3A69220035D4A5 /* Constants.swift in Sources */,
+				38DEBB062B3A6B3F0035D4A5 /* SocketViewModel.swift in Sources */,
+				38DEBB0D2B3A7DBB0035D4A5 /* OrderBookDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,15 +523,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SeSACSocket/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SeSACSocket/Resources/Presentation/Preview Content\"";
 				DEVELOPMENT_TEAM = 3UNP2C529F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "SeSAC-Socket";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,9 +541,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andyarchive.SeSACSocket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,15 +557,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SeSACSocket/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SeSACSocket/Resources/Presentation/Preview Content\"";
 				DEVELOPMENT_TEAM = 3UNP2C529F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "SeSAC-Socket";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,9 +575,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andyarchive.SeSACSocket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
