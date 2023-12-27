@@ -19,6 +19,7 @@
 		38DEBB062B3A6B3F0035D4A5 /* SocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB052B3A6B3F0035D4A5 /* SocketViewModel.swift */; };
 		38DEBB092B3A6CFF0035D4A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB082B3A6CFF0035D4A5 /* ContentView.swift */; };
 		38DEBB0D2B3A7DBB0035D4A5 /* OrderBookDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB0C2B3A7DBB0035D4A5 /* OrderBookDTO.swift */; };
+		38DEBB122B3BB9A00035D4A5 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEBB112B3BB9A00035D4A5 /* SwiftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		38DEBB082B3A6CFF0035D4A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		38DEBB0C2B3A7DBB0035D4A5 /* OrderBookDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookDTO.swift; sourceTree = "<group>"; };
 		38DEBB0E2B3A97F10035D4A5 /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
+		38DEBB112B3BB9A00035D4A5 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		38DEBAC82B3A612D0035D4A5 /* SeSACSocket */ = {
 			isa = PBXGroup;
 			children = (
+				38DEBB0F2B3BB97C0035D4A5 /* Swift-Practice */,
 				38DEBAF52B3A62850035D4A5 /* Resources */,
 				38DEBACD2B3A612F0035D4A5 /* Assets.xcassets */,
 			);
@@ -222,6 +225,14 @@
 				38DEBB0C2B3A7DBB0035D4A5 /* OrderBookDTO.swift */,
 			);
 			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		38DEBB0F2B3BB97C0035D4A5 /* Swift-Practice */ = {
+			isa = PBXGroup;
+			children = (
+				38DEBB112B3BB9A00035D4A5 /* SwiftViewController.swift */,
+			);
+			path = "Swift-Practice";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DEBB122B3BB9A00035D4A5 /* SwiftViewController.swift in Sources */,
 				38DEBACC2B3A612D0035D4A5 /* SocketView.swift in Sources */,
 				38DEBACA2B3A612D0035D4A5 /* SeSACSocketApp.swift in Sources */,
 				38DEBB092B3A6CFF0035D4A5 /* ContentView.swift in Sources */,
