@@ -7,26 +7,75 @@
 
 import UIKit
 
-final class SeSACLabel: UILabel {
+enum Component {
+    case label
+    case button
+}
+
+protocol UIComponent {
+    var component: Component { get }
+    var color: UIColor { get set }
+    var bgColor: UIColor { get set }
+}
+
+final class NewLabel: UILabel, UIComponent {
+    var component: Component = .label
+    var color: UIColor
+    var bgColor: UIColor
     
     init(
-        textColor: UIColor,
-        backgroundColor: UIColor
+        color: UIColor,
+        bgColor: UIColor
     ) {
+        self.color = color
+        self.bgColor = bgColor
+        
         super.init(frame: .zero)
         
-        self.textColor = textColor
-        self.backgroundColor = backgroundColor
+        self.textColor = color
+        self.backgroundColor = bgColor
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+struct Factory {
+    
+    static func make(_ component: Component) -> UIComponent {
+        switch component {
+        case .label:
+            return NewLabel(
+                color: .black,
+                bgColor: .systemYellow
+            )
+        case .button:
+            return NewLabel(
+                color: .white,
+                bgColor: .systemBlue
+            )
+        }
+    }
+}
+
+final class SeSACLabel: UILabel, UIComponent {
+    
+    var component: Component = .label
+    var color: UIColor
+    var bgColor: UIColor
+    
     init(
-        font: UIFont,
-        backgroundColor: UIColor
+        color: UIColor,
+        bgColor: UIColor
     ) {
+        self.color = color
+        self.bgColor = bgColor
+        
         super.init(frame: .zero)
         
-        self.font = font
-        self.backgroundColor = backgroundColor
+        self.textColor = color
+        self.backgroundColor = bgColor
     }
     
     /* 👿 문제점: required init을 매번 만들어야 하는가? */

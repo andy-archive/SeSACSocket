@@ -12,6 +12,9 @@ let status = false
 
 final class SwiftViewController: UIViewController {
     
+    //MARK: - UI
+    private lazy var titleLabel = Factory.make(.label)
+    
     //MARK: - Properties
     private let randomResult = {
         switch age {
@@ -50,6 +53,7 @@ final class SwiftViewController: UIViewController {
         /* New Generics */
         let result = makeNewGenericParameterPack(a: 3, 4)
         print(result.0, result.1)
+        
     }
     
     //MARK: - Private Methods
