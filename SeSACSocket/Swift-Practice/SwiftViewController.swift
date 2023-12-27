@@ -39,9 +39,21 @@ final class SwiftViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBlue.withAlphaComponent(0.2)
+        
+        /* 기존 제네릭의 단점: 여러 개를 담지 못함
+         -> 따로 담아도 10개까지만
+         */
+        makeOriginalGeneric(a: 3, b: "Hey")
+        makeOriginalGeneric(a: "Hello", b: 3)
+        makeOriginalGeneric(a: false, b: "ABC")
+        
+        /* New Generics */
+        let result = makeNewGenericParameterPack(a: 3, 4)
+        print(result.0, result.1)
     }
     
     //MARK: - Private Methods
+    /// switch-case
     private func randomAge_SwitchCase() -> String {
         let age = Int.random(in: 1...100)
         
@@ -56,6 +68,8 @@ final class SwiftViewController: UIViewController {
             return "UNKNOWN"
         }
     }
+    
+    /// if-else
     private func randomAge_IfElse() -> String {
         let age = Int.random(in: 1...100)
         
@@ -66,5 +80,17 @@ final class SwiftViewController: UIViewController {
         } else {
             return "if-else below 100"
         }
+    }
+    
+    /// Generics
+    private func makeOriginalGeneric<T, U>(a: T, b: U) {
+        print(a, b)
+    }
+    
+    /// Parameter Pack
+    ///     Generics with New Features
+    ///     "튜플"로 감싸서 반환
+    private func makeNewGenericParameterPack<each T>(a: repeat (each T)) -> (repeat each T) {
+        return (repeat each a)
     }
 }
